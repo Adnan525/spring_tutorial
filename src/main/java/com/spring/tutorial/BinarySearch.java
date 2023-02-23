@@ -1,9 +1,14 @@
 package com.spring.tutorial;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+@Component
 public class BinarySearch {
     //make this class loosely coupled
+    @Autowired
     SortingAlgorithm sortingAlgorithm;
     public BinarySearch(SortingAlgorithm sortingAlgorithm)
     {
