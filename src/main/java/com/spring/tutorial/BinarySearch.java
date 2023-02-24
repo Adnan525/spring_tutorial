@@ -1,5 +1,6 @@
 package com.spring.tutorial;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -10,7 +11,12 @@ import java.util.stream.IntStream;
 public class BinarySearch {
     //make this class loosely coupled
     @Autowired
+//    @Qualifier("bubble")
     SortingAlgorithm sortingAlgorithm;
+    //SortingAlgorithm bubbleSort; this will use the name "buubleSort" and use the bubbleSort bean
+    //annotation has higher priority than the name, so if we had @primary on bubble
+    //but variable name was quickSort, it would still use bubbleSort
+
     //constructor injection
 //    public BinarySearch(SortingAlgorithm sortingAlgorithm)
 //    {
