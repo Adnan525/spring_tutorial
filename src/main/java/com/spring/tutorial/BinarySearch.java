@@ -10,7 +10,14 @@ public class BinarySearch {
     //make this class loosely coupled
     @Autowired
     SortingAlgorithm sortingAlgorithm;
-    public BinarySearch(SortingAlgorithm sortingAlgorithm)
+    //constructor injection
+//    public BinarySearch(SortingAlgorithm sortingAlgorithm)
+//    {
+//        this.sortingAlgorithm = sortingAlgorithm;
+//    }
+    //setter injection
+    //even if we don't hav a setter, spring will use setter injection
+    public void setSortingAlgorithm(SortingAlgorithm sortingAlgorithm)
     {
         this.sortingAlgorithm = sortingAlgorithm;
     }
