@@ -7,6 +7,7 @@ plugins {
 group = 'com.spring.tutorial'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+// packagaing jar. was is for web application, ear is for enterprise application
 
 repositories {
 	mavenCentral()

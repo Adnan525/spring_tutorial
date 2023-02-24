@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+//ctrl + space to get the list of suggestions for imports / or normal suggestions
 @Component
 public class BinarySearch {
     //make this class loosely coupled

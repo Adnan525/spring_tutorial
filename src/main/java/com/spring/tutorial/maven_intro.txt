@@ -1,0 +1,20 @@
+maven is a build tool
+POM - project object model
+Maven build life cycle:
+    validate the project
+    compile the source code, test code
+    do test
+    package the code, build the jar
+    Integration test
+    verify the package is valid
+    install
+    deploy
+cmd: mvn clean install
+maven looks after the project structure as well.
+
+Local vs remote maven repository
+commands:
+    mvn clean compile
+    mvn test-complie
+    mvn test
+    mvn package
