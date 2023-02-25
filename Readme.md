@@ -17,3 +17,8 @@ BinarySearch bs1 = context.getBean(BinarySearch.class);
 ```
 - Request bean will get different instances for each request.
 - Session bean will get different instances for each session.
+- If we have person class with @singleton scope and it's dependency jdbc as @prototype scope, we still get same instance of jdbc for each person instance. To get different jdbc we will need proxy.  
+  
+```
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
+```

@@ -9,8 +9,6 @@ import java.util.stream.IntStream;
 //ctrl + space to get the list of suggestions for imports / or normal suggestions
 @Component
 public class BinarySearch {
-    //make this class loosely coupled
-
 //    @Qualifier("bubble")
     @Autowired
     SortingAlgorithm sortingAlgorithm;
@@ -18,13 +16,13 @@ public class BinarySearch {
 //    annotation has higher priority than the name, so if we had @primary on bubble
 //    but variable name was quickSort, it would still use bubbleSort
 
-    //constructor injection
+    //    constructor injection
 //    public BinarySearch(SortingAlgorithm sortingAlgorithm)
 //    {
 //        this.sortingAlgorithm = sortingAlgorithm;
 //    }
     //setter injection
-    //even if we don't hav a setter, spring will use setter injection
+    //even if we don't hav a setter, spring will use setter injection by default
     public void setSortingAlgorithm(SortingAlgorithm sortingAlgorithm)
     {
         this.sortingAlgorithm = sortingAlgorithm;
@@ -46,6 +44,5 @@ public class BinarySearch {
             //now i can just do a recursive call
             return Optional.empty();
         }
-        //search the array
     }
 }
