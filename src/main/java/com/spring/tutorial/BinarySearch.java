@@ -10,12 +10,13 @@ import java.util.stream.IntStream;
 @Component
 public class BinarySearch {
     //make this class loosely coupled
-    @Autowired
+
 //    @Qualifier("bubble")
+    @Autowired
     SortingAlgorithm sortingAlgorithm;
-    //SortingAlgorithm bubbleSort; this will use the name "buubleSort" and use the bubbleSort bean
-    //annotation has higher priority than the name, so if we had @primary on bubble
-    //but variable name was quickSort, it would still use bubbleSort
+//    SortingAlgorithm bubbleSort; this will use the name "buubleSort" and use the bubbleSort bean
+//    annotation has higher priority than the name, so if we had @primary on bubble
+//    but variable name was quickSort, it would still use bubbleSort
 
     //constructor injection
 //    public BinarySearch(SortingAlgorithm sortingAlgorithm)
