@@ -28,3 +28,11 @@ BinarySearch bs1 = context.getBean(BinarySearch.class);
 ```
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
 ```
+  
+## Component Scan Troubleshooting
+If we are in package called com.example.demo and have a class with @SpringApplication annotation
+the component scan will start from com.example.demo and won't include any other packages. 
+To include other packages we can use @ComponentScan annotation with package name passed as parameter.
+```
+@ComponentScan("com.example.demo")
+```
