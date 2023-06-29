@@ -12,6 +12,8 @@ public class BinarySearch {
 //  @Qualifier("bubble")
     @Autowired
     SortingAlgorithm sortingAlgorithm;
+
+
 //    SortingAlgorithm bubbleSort; this will use the name "buubleSort" and use the bubbleSort bean
 //    annotation has higher priority than the name, so if we had @primary on bubble
 //    but variable name was quickSort, it would still use bubbleSort
@@ -27,11 +29,14 @@ public class BinarySearch {
     {
         this.sortingAlgorithm = sortingAlgorithm;
     }
+
+    // main logic
     Optional<Integer> binarySearch(int[] arr, int n)
     {
-        //sorting logic
+        //check if sorted
         boolean isSorted = IntStream.range(0, arr.length - 1)
                 .allMatch(i -> arr[i] <= arr[i+1]);
+                
         if(isSorted) {
             //just returning a base value for the time being
             return Optional.of(3);
@@ -41,8 +46,10 @@ public class BinarySearch {
             //sorting algorithm
             //BubbleSort bSort = new BubbleSort();
             int[] sortedArr = sortingAlgorithm.sort(arr);
-            //now i can just do a recursive call
-            return Optional.empty();
+
+            //testing with empty
+            //return Optional.empty();
+            return Optional.of(3);
         }
     }
 }

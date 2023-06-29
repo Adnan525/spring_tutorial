@@ -2,6 +2,15 @@
 
 ## Bean
 
+@Component : bean, managed by spring  
+@primary : bean hierarchy, uses this by default  
+@Autowired : this is a dependency where bean will be injected  
+@SpringBootApplication : search for dependency in this package and in the sub packages (component scan)  
+  
+  
+Beans will be generated in application context  
+  
+
 - If when we generate same type of bean multiple times, we get the same instance of the bean, by default it's singleton.
 
 ```
@@ -37,23 +46,23 @@ To include other packages we can use @ComponentScan annotation with package name
 @ComponentScan("com.example.demo")
 ```
 ## Maven
-maven is a build tool
-POM - project object model
-Maven build life cycle:
-    validate the project
-    compile the source code, test code
-    do test
-    package the code, build the jar
-    Integration test
-    verify the package is valid
-    install
-    deploy
-cmd: mvn clean install
-maven looks after the project structure as well.
+maven is a build tool  
+POM - project object model  
+Maven build life cycle:  
+    validate the project  
+    compile the source code, test code  
+    do test  
+    package the code, build the jar  
+    Integration test  
+    verify the package is valid  
+    install  
+    deploy  
+cmd: mvn clean install  
+maven looks after the project structure as well.  
 
-Local vs remote maven repository
-commands:
-    mvn clean compile
-    mvn test-complie
-    mvn test
-    mvn package
+Local vs remote maven repository  
+commands:  
+    mvn clean compile  
+    mvn test-complie  
+    mvn test  
+    mvn package  
