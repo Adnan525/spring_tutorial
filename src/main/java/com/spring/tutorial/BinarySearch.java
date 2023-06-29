@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
-//ctrl + space to get the list of suggestions for imports / or normal suggestions
+// ctrl + space to get the list of suggestions for imports / or normal suggestions
 @Component
 public class BinarySearch {
-//    @Qualifier("bubble")
+//  @Qualifier("bubble")
     @Autowired
     SortingAlgorithm sortingAlgorithm;
 //    SortingAlgorithm bubbleSort; this will use the name "buubleSort" and use the bubbleSort bean

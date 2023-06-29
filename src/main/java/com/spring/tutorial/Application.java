@@ -15,11 +15,11 @@ public class Application {
 	public static void main(String[] args) {
 
 		// using optional to return a value
-//		int[] arr = {1,2,3,4,5,9,7,8,9,10};
-//		BinarySearch bs = new BinarySearch();
-//		System.out.println("=========================");
-//		System.out.println(bs.binarySearch(arr, 5).orElse(-1));
-//		System.out.println("=========================");
+		int[] arr = {1,2,3,4,5,9,7,8,9,10};
+		BinarySearch bs = new BinarySearch();
+		System.out.println("=========================");
+		System.out.println(bs.binarySearch(arr, 5).orElse(-1));
+		System.out.println("=========================");
 
 		// not using bean
 //		BinarySearch bs = new BinarySearch(new QuickSort());
@@ -32,12 +32,12 @@ public class Application {
 //		System.out.println(bs.binarySearch(new int[]{1,2,3,4,5,9,7,8,9,10}, 5).orElse(-1));
 
 		// bean scope testing
-		PersonDAO personDAO = context.getBean(PersonDAO.class);
-		PersonDAO personDAO2 = context.getBean(PersonDAO.class);
-		LOGGER.info("{}", personDAO);
-		LOGGER.info("{}", personDAO2);
-		LOGGER.info("{}", personDAO.getJdbcConnection());
-		LOGGER.info("{}", personDAO2.getJdbcConnection());
+		// PersonDAO personDAO = context.getBean(PersonDAO.class);
+		// PersonDAO personDAO2 = context.getBean(PersonDAO.class);
+		// LOGGER.info("{}", personDAO);
+		// LOGGER.info("{}", personDAO2);
+		// LOGGER.info("{}", personDAO.getJdbcConnection());
+		// LOGGER.info("{}", personDAO2.getJdbcConnection());
 
 	}
 
