@@ -5,28 +5,26 @@
 @Component : bean, managed by spring  
 @primary : bean hierarchy, uses this by default  
 @Autowired : this is a dependency where bean will be injected  
+    * we can rename autowired variable to set bean hiererchy or which bean to use
+    * @primary, which has higher priority than naming variable
+    * @Qualifier(_____), would add a tag to the bean class then we can use same tag for our autowired variable
+
 @SpringBootApplication : search for dependency in this package and in the sub packages (component scan)  
   
   
 Beans will be generated in application context  
-  
-
-- If when we generate same type of bean multiple times, we get the same instance of the bean, by default it's singleton.
-
+- If when we generate same type of bean multiple times, we get the same instance of the bean, by default it's singleton.  
 ```
 ApplicationContext context = SpringApplication.run(Application.class, args);
 BinarySearch bs = context.getBean(BinarySearch.class);
 BinarySearch bs1 = context.getBean(BinarySearch.class);
 //bs and bs1 are same instance
-```
-
-- Prototype bean will get different instances.
-
+```  
+- Prototype bean will get different instances.  
 ```
 @Scope("prototype")
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) //best practice
-```
-
+```  
 - Request bean will get different instances for each request.
 - Session bean will get different instances for each session.
 - If we have person class with @singleton scope and it's dependency jdbc as @prototype scope, we still get same instance of jdbc for each person instance. To get different jdbc we will need proxy.
